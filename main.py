@@ -10,8 +10,13 @@ def print_hi(name):
 
 
 def CalculateGroupCount(input_str):
-    val = input_str.replace("\n","")
+    val = input_str.replace("\n", "")
     return len(set(val))
+
+
+def CountEachGroup(input_str):
+    group_list = input_str.split("\n\n")
+    return [CalculateGroupCount(x) for x in group_list]
 
 
 # Press the green button in the gutter to run the script.

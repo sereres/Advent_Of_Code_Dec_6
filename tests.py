@@ -1,6 +1,6 @@
 import unittest
 
-from main import CalculateGroupCount
+from main import CalculateGroupCount, CountEachGroup
 
 
 class TestAocDay6(unittest.TestCase):
@@ -18,7 +18,7 @@ class TestAocDay6(unittest.TestCase):
 
         self.assertEqual(group_answer_count, 2)
 
-    def testOneGroupTwoPeopleDifferetAnswers(self):
+    def testOneGroupTwoPeopleDifferentAnswers(self):
         answer_list = "a\nb"
 
         group_answer_count = CalculateGroupCount(answer_list)
@@ -32,3 +32,9 @@ class TestAocDay6(unittest.TestCase):
 
         self.assertEqual(group_answer_count, 1)
 
+    def testTwoGroupsOneAnswerEach(self):
+        answer_list = "a\n\na"
+
+        list_group_counts = CountEachGroup(answer_list)
+
+        self.assertEqual(list_group_counts, [1, 1])
