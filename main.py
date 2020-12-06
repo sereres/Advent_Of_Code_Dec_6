@@ -9,8 +9,9 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
 
-def solution(input_str):
-    return len(input_str)
+def CalculateGroupCount(input_str):
+    val = input_str.replace("\n","")
+    return len(set(val))
 
 
 # Press the green button in the gutter to run the script.
