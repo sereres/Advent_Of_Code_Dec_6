@@ -21,6 +21,12 @@ def CountEachGroup(input_str):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    input_str = []
+    with open("/Users/sereres/aoc_day6_input.txt","r") as file:
+        input_str = file.read()
+    group_count_list = CountEachGroup(input_str)
+    final_answer = sum(group_count_list)
+    print(final_answer)
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
